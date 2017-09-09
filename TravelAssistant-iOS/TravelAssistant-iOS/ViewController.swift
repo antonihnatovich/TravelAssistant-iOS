@@ -7,12 +7,28 @@
 //
 
 import UIKit
+import Moya
+import ObjectMapper
 
 class ViewController: UIViewController {
 
+    let provider = MoyaProvider<CountriesAPI>()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        provider.request(.detailed(name: "belarus")) {
+            data in
+            switch data {
+            case .success(let response):
+                let json = try? JSONSerialization.jsonObject(with: response.data) as! Array<[String: Any]>
+                let objects = Mapper<Country>().mapArray(JSONArray: json!)
+                print(objects)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
