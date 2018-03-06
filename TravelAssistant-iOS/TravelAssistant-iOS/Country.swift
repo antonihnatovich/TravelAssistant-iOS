@@ -20,6 +20,7 @@ struct Country: Mappable {
     var area: Double!
     var timezone: String!
     var flag: String!
+    var alpha2: String!
     
     init?(map: Map) {
     }
@@ -34,5 +35,6 @@ struct Country: Mappable {
         area        <- map["area"]
         timezone    <- map["timezone"]
         flag        <- map["flag"]
+        alpha2      <- map["alpha2Code"]
     }
 }

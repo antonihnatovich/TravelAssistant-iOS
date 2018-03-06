@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		168074D8202859FF00BFF0E1 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168074D7202859FF00BFF0E1 /* CountryTableViewCell.swift */; };
 		3A1108491F64371000508D7E /* CountriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1108481F64371000508D7E /* CountriesAPI.swift */; };
 		3A11084C1F644A0200508D7E /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A11084B1F644A0200508D7E /* Country.swift */; };
 		84E58E4B1F61DDB30089CEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E58E4A1F61DDB30089CEC7 /* AppDelegate.swift */; };
-		84E58E4D1F61DDB30089CEC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E58E4C1F61DDB30089CEC7 /* ViewController.swift */; };
+		84E58E4D1F61DDB30089CEC7 /* GeneralCountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E58E4C1F61DDB30089CEC7 /* GeneralCountriesViewController.swift */; };
 		84E58E501F61DDB30089CEC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E58E4E1F61DDB30089CEC7 /* Main.storyboard */; };
 		84E58E531F61DDB30089CEC7 /* TravelAssistant_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84E58E511F61DDB30089CEC7 /* TravelAssistant_iOS.xcdatamodeld */; };
 		84E58E551F61DDB30089CEC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E58E541F61DDB30089CEC7 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		0EEEBC13BC2594FABC41F929 /* Pods-TravelAssistant-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelAssistant-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelAssistant-iOS/Pods-TravelAssistant-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		168074D7202859FF00BFF0E1 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		2712B7B575D369C27C5A6210 /* Pods_TravelAssistant_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelAssistant_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1108481F64371000508D7E /* CountriesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesAPI.swift; sourceTree = "<group>"; };
 		3A11084B1F644A0200508D7E /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -40,7 +42,7 @@
 		828BC18A0B3C3625575DF211 /* Pods_TravelAssistant_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelAssistant_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E58E471F61DDB30089CEC7 /* TravelAssistant-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TravelAssistant-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E58E4A1F61DDB30089CEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84E58E4C1F61DDB30089CEC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84E58E4C1F61DDB30089CEC7 /* GeneralCountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCountriesViewController.swift; sourceTree = "<group>"; };
 		84E58E4F1F61DDB30089CEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84E58E521F61DDB30089CEC7 /* TravelAssistant_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelAssistant_iOS.xcdatamodel; sourceTree = "<group>"; };
 		84E58E541F61DDB30089CEC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		168074D920285A2700BFF0E1 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				168074D7202859FF00BFF0E1 /* CountryTableViewCell.swift */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
 		3A1108421F6435B300508D7E /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +102,8 @@
 		3A1108441F6435C300508D7E /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				84E58E4C1F61DDB30089CEC7 /* ViewController.swift */,
+				168074D920285A2700BFF0E1 /* cells */,
+				84E58E4C1F61DDB30089CEC7 /* GeneralCountriesViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -249,6 +260,7 @@
 				TargetAttributes = {
 					84E58E461F61DDB30089CEC7 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 65UQE395BV;
 						ProvisioningStyle = Automatic;
 					};
 					84E58E5D1F61DDB30089CEC7 = {
@@ -324,6 +336,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TravelAssistant-iOS/Pods-TravelAssistant-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -333,6 +346,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -414,7 +428,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84E58E4D1F61DDB30089CEC7 /* ViewController.swift in Sources */,
+				168074D8202859FF00BFF0E1 /* CountryTableViewCell.swift in Sources */,
+				84E58E4D1F61DDB30089CEC7 /* GeneralCountriesViewController.swift in Sources */,
 				84E58E531F61DDB30089CEC7 /* TravelAssistant_iOS.xcdatamodeld in Sources */,
 				84E58E4B1F61DDB30089CEC7 /* AppDelegate.swift in Sources */,
 				3A11084C1F644A0200508D7E /* Country.swift in Sources */,
@@ -506,6 +521,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -549,6 +565,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -560,6 +577,7 @@
 			baseConfigurationReference = 0EEEBC13BC2594FABC41F929 /* Pods-TravelAssistant-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 65UQE395BV;
 				INFOPLIST_FILE = "TravelAssistant-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antonson.TravelAssistant-iOS";
@@ -573,6 +591,7 @@
 			baseConfigurationReference = 50F7AD838A69695F1A7C52AE /* Pods-TravelAssistant-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 65UQE395BV;
 				INFOPLIST_FILE = "TravelAssistant-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antonson.TravelAssistant-iOS";
