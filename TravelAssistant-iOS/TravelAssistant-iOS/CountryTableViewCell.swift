@@ -17,13 +17,18 @@ class CountryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        flagImageView.contentMode = .scaleAspectFill
         flagImageView.layer.cornerRadius = flagImageView.layer.bounds.height / 2
-        // Initialization code
+    }
+    
+    override func prepareForReuse() {
+        countryNameLabel.text = ""
+        countryCapitalLabel.text = ""
     }
     
     func bind(with country: Country) {
         flagImageView.kf.setImage(with: URL(string: "http://flags.fmcdn.net/data/flags/w1160/\(country.alpha2.lowercased()).png")!)
+        countryCapitalLabel.text = country.capital
+        countryNameLabel.text = country.name
     }
 
 }
