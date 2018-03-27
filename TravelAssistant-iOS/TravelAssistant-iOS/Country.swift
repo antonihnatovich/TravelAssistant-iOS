@@ -21,6 +21,7 @@ struct Country: Mappable {
     var timezone: String!
     var flag: String!
     var alpha2: String!
+    var currencies: [Currency]?
     
     init?(map: Map) {
     }
@@ -36,5 +37,17 @@ struct Country: Mappable {
         timezone    <- map["timezone"]
         flag        <- map["flag"]
         alpha2      <- map["alpha2Code"]
+        currencies  <- map["currencies"]
+    }
+}
+
+extension Country: Hashable {
+    
+    var hashValue: Int {
+        return (name+alpha2).hashValue
+    }
+    
+    static func == (l: Country, r: Country) -> Bool {
+        return l.name.elementsEqual(r.name) && l.alpha2.elementsEqual(r.alpha2)
     }
 }
